@@ -1,0 +1,34 @@
+div .progress {
+    height: 35px;
+}
+
+.scraped-details {
+    gap: 5%;
+    margin: 4% 0;
+}
+
+.scraped-details p {
+    width: 500px;
+}
+
+.scraped-details h3 {
+    margin-top: 30px;
+}
+
+.scraped-details img {
+    width: 500px;
+    height: 375px;
+}
+
+.scraped-details ul {
+    font-style: italic;
+}
+
+.down-space {
+    margin-bottom: 2%;
+    gap: 5%;
+}
+
+.down-space table {
+    width: 250px;
+}

@@ -1,0 +1,56 @@
+nav.navbar {
+    background-color: #8338EC;
+    color: #8338EC;
+}
+
+.navbar button {
+    color: white;
+    border-color: white;
+}
+
+.navbar button:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+div .breadcrumb {
+    padding: 1%;
+    margin: 0;
+    border-bottom: 8px solid #8338EC;
+}
+
+.question-title {
+    text-align: center;
+    padding: 2%;
+}
+
+div.card {
+    padding: 0;
+}
+
+.card {
+    transition: all 0.5s;
+}
+
+.justify-content-center button {
+    background-color: #FFBE0B;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.justify-content-center button:hover {
+    background-color: white;
+    color: #FFBE0B;
+    border-color: #FFBE0B;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.row .selected-card {
+    border-color: #3A86FF;
+}

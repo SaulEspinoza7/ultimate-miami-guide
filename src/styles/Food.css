@@ -1,0 +1,17 @@
+.food-welcome {
+    background-image: url("../assets/foodBackground.jpg");
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.food-welcome .food-welcome-title {
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 20%;
+    padding: 15px;
+    text-align: center;
+    font-weight: 900;
+}
