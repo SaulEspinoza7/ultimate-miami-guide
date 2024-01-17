@@ -172,20 +172,25 @@ h1 {
 
 @media (max-width: 500px) {
   nav img {
-    width: 100px;
-    height: 70px;
+    width: 90px;
+    height: 65px;
   }
 
   .home-intro nav ul li {
-    padding: 12px 14px;
+    padding: 12px 7px;
     font-size: 13px;
   }
   nav ul {
     padding-left: 0;
   }
-  
+
+  .welcome-text h1 {
+    font-size: 40px;
+  }
+
   .welcome-text h2 {
     padding-right: 5px;
+    font-size: 1.55rem;
   }
 
   .little-demo {
@@ -193,7 +198,7 @@ h1 {
   }
 
   .choices .card {
-    width: 175px
+    width: 151px;
   }
 
   .choices .card p {

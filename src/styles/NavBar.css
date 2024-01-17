@@ -57,6 +57,10 @@ button:disabled {
 
 @media (max-width: 500px) {
     .navbar .form-control {
-        width: 150px;
-    } 
+        width: 145px;
+    }
+    
+    .navbar form button {
+        width: 70px;
+    }
 }
