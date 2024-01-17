@@ -169,3 +169,46 @@ h1 {
     font-size: 1.7rem;
   }
 }
+
+@media (max-width: 500px) {
+  nav img {
+    width: 100px;
+    height: 70px;
+  }
+
+  .home-intro nav ul li {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  nav ul {
+    padding-left: 0;
+  }
+  
+  .welcome-text h2 {
+    padding-right: 5px;
+  }
+
+  .little-demo {
+    flex-wrap: wrap;
+  }
+
+  .choices .card {
+    width: 175px
+  }
+
+  .choices .card p {
+    display: none;
+  }
+
+  .little-demo img {
+    width: 300px;
+  }
+
+  .my-buttons button {
+    font-size: 14px;
+  }
+
+  .little-demo p {
+    padding: 10px 20px;
+  }
+}

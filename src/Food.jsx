@@ -58,14 +58,14 @@ const Food = () => {
 
             <div className='container-fluid'>
                 <div className='row justify-content-center d-flex gap-5'>
-                    <div class={`card col-lg-2 ${restaurantType == "y" ? "selected-card" : ""}`} onClick={() => setRestaurantType("y")}>
+                    <div class={`card col-5 col-lg-2 ${restaurantType == "y" ? "selected-card" : ""}`} onClick={() => setRestaurantType("y")}>
                         <img src={Affordable} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Affordable restaurants</p>
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${restaurantType == "n" ? "selected-card" : ""}`} onClick={() => setRestaurantType("n")}>
+                    <div class={`card col-5 col-lg-2 ${restaurantType == "n" ? "selected-card" : ""}`} onClick={() => setRestaurantType("n")}>
                         <img src={Fancy} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Fancy restaurants</p>

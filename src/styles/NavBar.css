@@ -54,3 +54,9 @@ button:disabled {
 .row .selected-card {
     border-color: #3A86FF;
 }
+
+@media (max-width: 500px) {
+    .navbar .form-control {
+        width: 150px;
+    } 
+}
