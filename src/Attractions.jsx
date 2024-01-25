@@ -3,7 +3,7 @@ import DetailsContext from "./context/details-context";
 import Axios from "axios";
 import NavBar from "./NavBar";
 import Results from "./Results";
-import "./styles/attractions.css";
+import "./styles/Attractions.css";
 import "./styles/Food.css";
 import Museum from "./assets/attractions/museum.jpg";
 import Zoo from "./assets/attractions/zoo.jpg";
