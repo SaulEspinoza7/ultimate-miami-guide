@@ -1,0 +1,17 @@
+.attraction-welcome {
+    background-image: url("../assets/attractionsBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    color: white;
+}
+
+.attraction-welcome-title {
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 20%;
+    padding: 15px;
+    text-align: center;
+    font-weight: 900;
+}

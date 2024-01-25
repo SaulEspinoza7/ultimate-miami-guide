@@ -1,7 +1,8 @@
 import './styles/Food.css'
 import NavBar from './NavBar.jsx'
 import Results from './Results.jsx'
-import React, {useState} from "react"
+import DetailsContext from './context/details-context.jsx'
+import React, {useState, useContext} from "react"
 import Affordable from "./assets/affordable-rest.jpg"
 import Fancy from "./assets/fancy-restaurant.jpg"
 import Cuban from "./assets/cuban.jpg"
@@ -14,16 +15,19 @@ import Bar from "./assets/bar.jpg"
 import Hispanic from "./assets/hispanic.jpg"
 import Axios from "axios"
 
+
 const Food = () => {
     const [restaurants, setRestaurants] = useState(null)
     const [restaurantType, setRestaurantType] = useState("")
     const [cuisine, setCuisine] = useState("")
+    const {placeType, setPlaceType} = useContext(DetailsContext)
 
     const isButtonDisabled = () => {
         return restaurantType == "" || cuisine == ""
     }
 
     const retrieveRestaurants = () => {
+        setPlaceType("Restaurants");
         const affordable = restaurantType;
         const myCuisine = cuisine;
         
@@ -40,11 +44,11 @@ const Food = () => {
 
     return (
         <>
-            <NavBar type = "restaurants"></NavBar>
+            <NavBar type={placeType.toLowerCase()}></NavBar>
             <div>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Food</li>
+                    <li class="breadcrumb-item active" aria-current="page">Restaurants</li>
                 </ol>
             </div>
             
@@ -76,28 +80,28 @@ const Food = () => {
                 <div><h1 className='question-title'>What type of food are you looking for?</h1></div>
 
                 <div className='row justify-content-center d-flex gap-5 my-4'>
-                    <div class={`card col-lg-2 ${cuisine == "cuban" ? "selected-card" : ""}`} onClick={() => setCuisine("cuban")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "cuban" ? "selected-card" : ""}`} onClick={() => setCuisine("cuban")}>
                         <img src={Cuban} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Cuban</p>
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${cuisine == "italian" ? "selected-card" : ""}`} onClick={() => setCuisine("italian")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "italian" ? "selected-card" : ""}`} onClick={() => setCuisine("italian")}>
                         <img src={Italian} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Italian</p>
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${cuisine == "chinese" ? "selected-card" : ""}`} onClick={() => setCuisine("chinese")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "chinese" ? "selected-card" : ""}`} onClick={() => setCuisine("chinese")}>
                         <img src={Chinese} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Chinese</p>
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${cuisine == "sandwich" ? "selected-card" : ""}`} onClick={() => setCuisine("sandwich")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "sandwich" ? "selected-card" : ""}`} onClick={() => setCuisine("sandwich")}>
                         <img src={Sandwich} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Sandwiches</p>
@@ -106,28 +110,28 @@ const Food = () => {
                 </div>
 
                 <div className='row justify-content-center d-flex gap-5 mb-5'>
-                    <div class={`card col-lg-2 ${cuisine == "middle" ? "selected-card" : ""}`} onClick={() => setCuisine("middle")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "middle" ? "selected-card" : ""}`} onClick={() => setCuisine("middle")}>
                         <img src={Middle} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Middle Eastern</p>
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${cuisine == "french" ? "selected-card" : ""}`} onClick={() => setCuisine("french")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "french" ? "selected-card" : ""}`} onClick={() => setCuisine("french")}>
                         <img src={French} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">French</p>
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${cuisine == "bar" ? "selected-card" : ""}`} onClick={() => setCuisine("bar")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "bar" ? "selected-card" : ""}`} onClick={() => setCuisine("bar")}>
                         <img src={Bar} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Bar</p> 
                         </div>
                     </div>
 
-                    <div class={`card col-lg-2 ${cuisine == "hispanic" ? "selected-card" : ""}`} onClick={() => setCuisine("hispanic")}>
+                    <div class={`card col-5 col-lg-2 ${cuisine == "hispanic" ? "selected-card" : ""}`} onClick={() => setCuisine("hispanic")}>
                         <img src={Hispanic} class="card-img-top" alt="..."></img>
                         <div class="card-body">
                             <p class="card-text">Hispanic</p>

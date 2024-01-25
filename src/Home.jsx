@@ -115,7 +115,7 @@ const Home = () => {
                 </div>
 
                 <div className='choices'>
-                    <a href='/food'>
+                    <a href='/restaurants'>
                         <div ref={ref} class={`card text-bg-dark col-md-3 ${isIntersecting ? 'show' : 'hidden'}`}>
                             <img src={Food} class="card-img"></img>
                             <div class="card-img-overlay">
@@ -126,7 +126,7 @@ const Home = () => {
                         </div>
                     </a> 
 
-                    <a href='#'>
+                    <a href='/attractions'>
                         <div class={`card text-bg-dark col-md-3 ${isIntersecting ? 'show' : 'hidden'}`} id='b1'>
                             <img src={Attractions} class="card-img"></img>
                             <div class="card-img-overlay">

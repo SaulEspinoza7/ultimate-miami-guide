@@ -32,3 +32,53 @@ div .progress {
 .down-space table {
     width: 250px;
 }
+
+@media(max-width: 1200px) {
+    .details-first {
+        width: 500px;
+    }
+    
+
+    .scraped-details img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .scraped-details p {
+        width: 400px;
+    }
+
+    iframe {
+        width: 500px;
+        height: 375px;
+    }
+}
+
+@media(max-width: 500px) {
+    .details-first {
+        width: 320px;
+        margin-bottom: 40px;
+    }
+    
+    .scraped-details {
+        flex-direction: column;
+    }
+
+    .scraped-details p {
+        width: 320px;
+    }
+
+    .scraped-details img {
+        width: 320px;
+        height: 196px;
+    }
+
+    .hour-n-map {
+        flex-direction: column;
+    }
+
+    iframe {
+        width: 320px;
+        height: 225px;
+    }
+}

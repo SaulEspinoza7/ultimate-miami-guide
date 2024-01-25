@@ -7,7 +7,7 @@ import "./styles/Details.css";
 
 const Details = () => {
     const [extraDetails, setExtraDetails] = useState(null);
-    const {details} = useContext(DetailsContext);
+    const {details, placeType} = useContext(DetailsContext);
     let barWidth = "0%";
     
     useEffect(() => {
@@ -26,11 +26,11 @@ const Details = () => {
     if(extraDetails == null) {
         return (
             <>
-                <NavBar type="restaurants"/>
+                <NavBar type={placeType.toLowerCase()}/>
                 <div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                        <li class="breadcrumb-item"><Link to="/food">Food</Link></li>
+                        <li class="breadcrumb-item"><Link to={`/${placeType.toLowerCase()}`}>{placeType}</Link></li>
                         <li class="breadcrumb-item active" aria-current="page">{details.name}</li>
                     </ol>
                 </div>
@@ -49,11 +49,11 @@ const Details = () => {
 
     return (
         <>
-            <NavBar type="restaurants"/>
+            <NavBar type={placeType.toLowerCase()}/>
             <div>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-                    <li class="breadcrumb-item"><Link to="/food">Food</Link></li>
+                    <li class="breadcrumb-item"><Link to={`/${placeType.toLowerCase()}`}>{placeType}</Link></li>
                     <li class="breadcrumb-item active" aria-current="page">{details.name}</li>
                 </ol>
             </div>
@@ -61,7 +61,7 @@ const Details = () => {
             <h1 className="d-flex justify-content-center mt-4">{details.name}</h1>
 
             <div className="d-flex justify-content-center align-items-center scraped-details">
-                <div>
+                <div className="details-first">
                     <ul className="d-flex flex-column">
                         <li>{extraDetails[1][0]}</li>
                         <li>{extraDetails[1][1]}</li>
@@ -81,7 +81,7 @@ const Details = () => {
                 </div>
             </div>
 
-            <div className="d-flex justify-content-center down-space">
+            <div className="d-flex justify-content-center down-space hour-n-map">
                 {extraDetails[2] != null && <table>
                     <tr>
                         <th colSpan={2}>Schedule</th>
