@@ -13,7 +13,7 @@ const Details = () => {
     useEffect(() => {
         const theUrl = details.url;
         
-        Axios.get("https://18851f617a03.ngrok.app/details", {
+        Axios.get("https://193595b265fa.ngrok.app/details", {
             params: {
                 url: theUrl
             }, 

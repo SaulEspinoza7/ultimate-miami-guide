@@ -26,7 +26,7 @@ const Attractions = () => {
         setPlaceType("Attractions")
         const type = place;
 
-        Axios.get("https://18851f617a03.ngrok.app/attractions", {
+        Axios.get("https://193595b265fa.ngrok.app/attractions", {
             params: {
                 type
             }, 

@@ -17,14 +17,14 @@ const Searched = () => {
         const type = place.type;
         const name = "%" + query + "%";
 
-        Axios.get("https://18851f617a03.ngrok.app/specific-place", {
+        Axios.get("https://193595b265fa.ngrok.app/specific-place", {
             params: {
                 type, 
                 name
             }, 
             headers: new Headers({
                 "ngrok-skip-browser-warning": "69420",
-              }),
+            }),
         }).then((response) => {
             setSpecificArray(response.data);
             console.log(response.data)

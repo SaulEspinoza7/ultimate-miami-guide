@@ -31,7 +31,7 @@ const Food = () => {
         const affordable = restaurantType;
         const myCuisine = cuisine;
         
-        Axios.get("https://18851f617a03.ngrok.app/restaurants", {
+        Axios.get("https://193595b265fa.ngrok.app/restaurants", {
             params: {
                 affordable,
                 myCuisine
