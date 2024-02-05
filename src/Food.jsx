@@ -31,11 +31,14 @@ const Food = () => {
         const affordable = restaurantType;
         const myCuisine = cuisine;
         
-        Axios.get("https://us-central1-vernal-signal-391117.cloudfunctions.net/function-1/restaurants", {
+        Axios.get("https://18851f617a03.ngrok.app/restaurants", {
             params: {
                 affordable,
                 myCuisine
-            }
+            }, 
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "69420",
+              }),
         }).then((response) => {
             setRestaurants(response.data)
             console.log(response.data);

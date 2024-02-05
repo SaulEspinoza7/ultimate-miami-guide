@@ -13,10 +13,13 @@ const Details = () => {
     useEffect(() => {
         const theUrl = details.url;
         
-        Axios.get("https://us-central1-vernal-signal-391117.cloudfunctions.net/function-1/details", {
+        Axios.get("https://18851f617a03.ngrok.app/details", {
             params: {
                 url: theUrl
-            }
+            }, 
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "69420",
+              }),
         }).then((response) => {
             setExtraDetails(response.data)
             console.log(response.data)

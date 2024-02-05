@@ -26,10 +26,13 @@ const Attractions = () => {
         setPlaceType("Attractions")
         const type = place;
 
-        Axios.get("https://us-central1-vernal-signal-391117.cloudfunctions.net/function-1/attractions", {
+        Axios.get("https://18851f617a03.ngrok.app/attractions", {
             params: {
                 type
-            }
+            }, 
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "69420",
+              }),
         }).then((response) => {
             setAttractions(response.data);
         })
