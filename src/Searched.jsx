@@ -7,7 +7,7 @@ import Results from "./Results";
 
 const Searched = () => {
     const [specificArray, setSpecificArray] = useState([]);
-    const {placeType} = useContext(DetailsContext)
+    const {placeType, globalUrl} = useContext(DetailsContext)
     const place = useParams();
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -17,7 +17,7 @@ const Searched = () => {
         const type = place.type;
         const name = "%" + query + "%";
 
-        Axios.get("https://193595b265fa.ngrok.app/specific-place", {
+        Axios.get(globalUrl + "specific-place", {
             params: {
                 type, 
                 name

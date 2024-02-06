@@ -16,7 +16,7 @@ import Shopping from "./assets/attractions/shopping.jpg";
 const Attractions = () => {
     const [place, setPlace] = useState("")
     const [attractions, setAttractions] = useState(null)
-    const {placeType, setPlaceType} = useContext(DetailsContext)
+    const {placeType, setPlaceType, globalUrl} = useContext(DetailsContext)
 
     const isButtonDisabled = () => {
         return place == "";
@@ -26,7 +26,7 @@ const Attractions = () => {
         setPlaceType("Attractions")
         const type = place;
 
-        Axios.get("https://193595b265fa.ngrok.app/attractions", {
+        Axios.get(globalUrl + "attractions", {
             params: {
                 type
             }, 

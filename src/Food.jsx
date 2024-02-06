@@ -20,7 +20,7 @@ const Food = () => {
     const [restaurants, setRestaurants] = useState(null)
     const [restaurantType, setRestaurantType] = useState("")
     const [cuisine, setCuisine] = useState("")
-    const {placeType, setPlaceType} = useContext(DetailsContext)
+    const {placeType, setPlaceType, globalUrl} = useContext(DetailsContext)
 
     const isButtonDisabled = () => {
         return restaurantType == "" || cuisine == ""
@@ -31,7 +31,7 @@ const Food = () => {
         const affordable = restaurantType;
         const myCuisine = cuisine;
         
-        Axios.get("https://193595b265fa.ngrok.app/restaurants", {
+        Axios.get(globalUrl + "restaurants", {
             params: {
                 affordable,
                 myCuisine

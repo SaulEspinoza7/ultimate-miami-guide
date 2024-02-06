@@ -7,13 +7,13 @@ import "./styles/Details.css";
 
 const Details = () => {
     const [extraDetails, setExtraDetails] = useState(null);
-    const {details, placeType} = useContext(DetailsContext);
+    const {details, placeType, globalUrl} = useContext(DetailsContext);
     let barWidth = "0%";
     
     useEffect(() => {
         const theUrl = details.url;
         
-        Axios.get("https://193595b265fa.ngrok.app/details", {
+        Axios.get(globalUrl + "details", {
             params: {
                 url: theUrl
             }, 

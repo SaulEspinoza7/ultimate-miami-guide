@@ -11,10 +11,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   const [details, setDetails] = useState([])
   const [placeType, setPlaceType] = useState("Restaurants");
+  const [globalUrl, setGlobalUrl] = useState("https://234e8d1247e3.ngrok.app/")
 
   return (
     <BrowserRouter>
-      <DetailsContext.Provider value={{details, setDetails, placeType, setPlaceType}}>
+      <DetailsContext.Provider value={{details, setDetails, placeType, setPlaceType, globalUrl}}>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/restaurants" element={<Food/>}/>
