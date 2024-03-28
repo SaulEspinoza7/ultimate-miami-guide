@@ -1,10 +1,16 @@
 import { useContext } from "react";
 import DetailsContext from "./context/details-context";
 import componentStyles from "./styles/ResultComponent.module.css";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const ResultComponent = (props) => {
     const {setDetails} = useContext(DetailsContext);
+    const navigate = useNavigate();
+
+    const clickComponent = () => {
+        setDetails(props);
+        navigate("/places/" + props.id);
+    }
 
     return (
         <>
@@ -13,7 +19,7 @@ const ResultComponent = (props) => {
                 <div class="card-body">
                     <h5 class="card-title">{props.name}</h5>
                     <p class="card-text">{props.description}</p>
-                    <Link to={`/places/${props.id}`} class="btn btn-primary" onClick={() => setDetails(props)}>More Information</Link>
+                    <button onClick={clickComponent} className={`${componentStyles.cardButton}`}>More Information</button>
                 </div>
             </div>
         </>

@@ -14,6 +14,18 @@
     transform: none;
 }
 
+.card .cardButton {
+    background-color:#0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    width: 150px;
+}
+
+.card .cardButton:hover {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
 @media (max-width: 1200px) {
     .card img {
         height: 200px;
@@ -30,6 +42,11 @@
     }
 
     .card a {
+        font-size: 12px;
+    }
+
+    .card .cardButton {
+        width: 130px;
         font-size: 12px;
     }
 }
