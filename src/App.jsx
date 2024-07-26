@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   const [details, setDetails] = useState([])
   const [placeType, setPlaceType] = useState("Restaurants");
-  const [globalUrl, setGlobalUrl] = useState("https://3cbbae910f6e.ngrok.app/")
+  const [globalUrl, setGlobalUrl] = useState("https://664fc2328bf5.ngrok.app/")
 
   return (
     <BrowserRouter>
